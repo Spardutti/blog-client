@@ -20,16 +20,19 @@ const Login = (props) => {
 
   const login = async (e) => {
     e.preventDefault();
-    const response = await fetch("/login", {
-      method: "POST",
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://warm-ravine-05729.herokuapp.com/login",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     if (data) {
       localStorage.setItem("token", data.token);

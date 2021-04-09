@@ -24,17 +24,20 @@ const SignUp = (props) => {
 
   const createUser = async (e) => {
     e.preventDefault();
-    const response = await fetch("/new/user", {
-      method: "POST",
-      body: JSON.stringify({
-        username: username,
-        password: password,
-        confirm: confirm,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://warm-ravine-05729.herokuapp.com/new/user",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          username: username,
+          password: password,
+          confirm: confirm,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     if (data.errors) {
       setErrors(data.errors);

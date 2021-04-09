@@ -22,17 +22,20 @@ const Post = (props) => {
       e.preventDefault();
     } else {
       e.preventDefault();
-      const response = await fetch("/blog/" + props.postId, {
-        method: "PUT",
-        body: JSON.stringify({
-          author: props.userData,
-          text: postText,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
-        },
-      });
+      const response = await fetch(
+        "https://warm-ravine-05729.herokuapp.com/blog/" + props.postId,
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            author: props.userData,
+            text: postText,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+        }
+      );
       const data = await response.json();
       setPostText("");
       props.setPostData(data);

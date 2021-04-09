@@ -11,7 +11,9 @@ const Home = (props) => {
   const { setPostData } = props;
   //GET ALL POST
   const getPosts = async () => {
-    const response = await fetch("/blog");
+    const response = await fetch(
+      "https://warm-ravine-05729.herokuapp.com/blog"
+    );
     const data = await response.json();
     setPosts(data);
   };
@@ -21,7 +23,9 @@ const Home = (props) => {
     if (props.userData) {
       let id = e.target.id;
       props.setPostId(id);
-      const response = await fetch("blog/" + id);
+      const response = await fetch(
+        "https://warm-ravine-05729.herokuapp.com/blog/" + id
+      );
       const data = await response.json();
       setPostData(data);
       history.push("/post");
