@@ -42,7 +42,7 @@ function App() {
         <NavBar userData={userData} setUserData={setUserData} />
       </div>
       <Switch>
-        <Route exact path="/" component={Home}>
+        <Route exact path="/blog-client" component={Home}>
           <Home
             userData={userData}
             setPostData={setPostData}

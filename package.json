@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "http://spardutti.github.io/blog-client",
+  "homepage": "http://spardutti.github.io/blog-client/",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.6.0",
