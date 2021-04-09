@@ -4,7 +4,10 @@
   border-radius: 10px;
 }
 
-.loading {
+.spinner {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 60px;
 }
 
 .posts-container {

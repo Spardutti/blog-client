@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Spinner } from "reactstrap";
 import "./home.css";
 
 const Home = (props) => {
@@ -38,7 +39,9 @@ const Home = (props) => {
     <div className="home-container">
       {/* POST LOADING */}
       {!posts ? (
-        <div className="loading">loading</div>
+        <div className="spinner">
+          <Spinner color="primary" />
+        </div>
       ) : (
         /* DISPLAY ALL POST */
         posts.map((e) => {
