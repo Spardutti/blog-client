@@ -28,7 +28,7 @@ const Home = (props) => {
       );
       const data = await response.json();
       setPostData(data);
-      history.push("/post");
+      history.push("/blog-client/post");
     } else {
       alert("Please log in");
     }

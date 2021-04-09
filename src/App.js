@@ -42,7 +42,7 @@ function App() {
         <NavBar userData={userData} setUserData={setUserData} />
       </div>
       <Switch>
-        <Route exact path="/blog-client" component={Home}>
+        <Route exact path="/blog-client/" component={Home}>
           <Home
             userData={userData}
             setPostData={setPostData}
@@ -50,10 +50,10 @@ function App() {
             setPostId={setPostId}
           />
         </Route>
-        <Route path="/login">
+        <Route path="/blog-client/login">
           <Login setUserData={setUserData} />
         </Route>
-        <Route path="/post">
+        <Route path="/blog-client/post">
           <Post
             postData={postData}
             userData={userData}
@@ -62,7 +62,7 @@ function App() {
             setPostData={setPostData}
           />
         </Route>
-        <Route path="/new/user">
+        <Route path="/blog-client/new/user">
           <SingUp />
         </Route>
       </Switch>
