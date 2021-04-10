@@ -99,3 +99,21 @@
   border-radius: 20px;
   padding: 10px;
 }
+
+@media screen and (max-width: 420px) {
+  .text-container {
+    width: 80%;
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .comment-container {
+    width: 80%;
+  }
+  .comment-author {
+    width: 80%;
+  }
+  .addcomment-form {
+    width: 80%;
+  }
+}

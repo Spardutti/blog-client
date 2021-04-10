@@ -18,7 +18,7 @@ const NavBar = (props) => {
         {/*IF USER IS LOGGED IN DISPLAY LOGOUT */}
         {props.userData ? (
           <div className="nav-items">
-            <Link to="/blog-client/">Home</Link>
+            <Link to="/">Home</Link>
             <p>Hi, {props.userData.username}</p>
             <form method="GET" action="/logout">
               <button onClick={removeToken}>Log out</button>
@@ -27,9 +27,9 @@ const NavBar = (props) => {
         ) : (
           /*IF USER IS NOT YET LOGGED */
           <div className="nav-items">
-            <Link to="/blog-client/">Home</Link>
-            <Link to="/blog-client/new/user">Sign up</Link>
-            <Link to="/blog-client/login">Log in</Link>
+            <Link to="/">Home</Link>
+            <Link to="/new/user">Sign up</Link>
+            <Link to="/login">Log in</Link>
           </div>
         )}
       </div>

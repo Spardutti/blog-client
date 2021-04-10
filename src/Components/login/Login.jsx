@@ -37,7 +37,7 @@ const Login = (props) => {
     if (data) {
       localStorage.setItem("token", data.token);
       props.setUserData(data.user);
-      history.push("/blog-client/");
+      history.push("/");
     }
   };
 

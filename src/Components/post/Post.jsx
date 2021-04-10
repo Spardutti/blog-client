@@ -53,7 +53,7 @@ const Post = (props) => {
   const goBack = () => {
     props.setPostData();
     setPostText();
-    history.push("/blog-client/");
+    history.push("/");
   };
 
   return (

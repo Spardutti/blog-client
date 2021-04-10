@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import jwt from "jsonwebtoken";
 
@@ -37,12 +37,12 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <NavBar userData={userData} setUserData={setUserData} />
       </div>
       <Switch>
-        <Route exact path="/blog-client/" component={Home}>
+        <Route exact path="/" component={Home}>
           <Home
             userData={userData}
             setPostData={setPostData}
@@ -50,10 +50,10 @@ function App() {
             setPostId={setPostId}
           />
         </Route>
-        <Route path="/blog-client/login">
+        <Route path="/login">
           <Login setUserData={setUserData} />
         </Route>
-        <Route path="/blog-client/post">
+        <Route path="/post">
           <Post
             postData={postData}
             userData={userData}
@@ -62,11 +62,11 @@ function App() {
             setPostData={setPostData}
           />
         </Route>
-        <Route path="/blog-client/new/user">
+        <Route path="/new/user">
           <SingUp />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
