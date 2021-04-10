@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Blog Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto consta de 3 partes, el cliente donde el usuario puede ver la informacion y agregar comentarios a los diferentes post.
 
-## Available Scripts
+[Pagina Cliente](https://spardutti.github.io/blog-client/)
 
-In the project directory, you can run:
 
-### `npm start`
+El panel administrativo, donde un admin (cualquier usuario registrado) puede crear, editar, borrar y publicar los Posts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Pagina Admin](https://spardutti.github.io/blog-admin/)
+[Github Admin](https://github.com/Spardutti/blog-admin)
 
-### `npm test`
+Y por ultimo el servidor, el cual se encarga de manejar toda la informacion de la base datos y hacer los request.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Github Server](https://github.com/Spardutti/blog-server/)
 
-### `npm run build`
+# El Proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Los usuarios que ingresen a su cuenta podran ver los diferentes posts creados por el administrador, y podran dejar comentarios en los diferentes posts. Cuenta con un sistema de autorizacion gestinado con passportjs y jsonwebtokens, las cual son almacenadas en localStorage para mantener la sesion iniciada del usuario. Una vez que el token expire, el usuario tendra que volver a acceder a su cuenta para generar un nuevo Token.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Toda la informacion es traida y enviada atraves del servidor que se encarga de gestionar todos los request(GET, POST, PUT, DELETE)
+La navegacion es realizada mediante React Router
